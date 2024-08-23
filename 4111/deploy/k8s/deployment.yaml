@@ -29,8 +29,6 @@ spec:
         instance: api-tester-4111
         version: 3.0.0
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: k8s-master
       terminationGracePeriodSeconds: 60
       containers:
         - name: api-tester-4111
