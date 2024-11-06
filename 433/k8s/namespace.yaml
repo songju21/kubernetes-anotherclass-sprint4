@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: anotherclass-411
+  name: anotherclass-433
   labels:
     part-of: k8s-anotherclass
     managed-by: kubectl

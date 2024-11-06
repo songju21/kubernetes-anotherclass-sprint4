@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-tester-4334
+  namespace: anotherclass-433
+spec:
+  selector:
+    matchLabels:
+      instance: api-tester-4334
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        instance: api-tester-4334
+    spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: instance
+                    operator: In
+                    values: [api-tester-4333]
+              topologyKey: "zone"
+      containers:
+        - name: api-tester4334
+          image: 1pro/api-tester:3.0.0
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "200Mi"
+              cpu: "200m"
