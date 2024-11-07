@@ -6,12 +6,6 @@ metadata:
   labels:
     instance: api-tester-4336
 spec:
-  nodeSelector:
-    process: gpu
-  tolerations:
-    - key: gpu
-      operator: Exists
-      effect: NoSchedule
   containers:
     - name: api-tester-4336
       image: 1pro/api-tester:3.0.0

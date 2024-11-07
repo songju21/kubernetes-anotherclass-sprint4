@@ -1,19 +1,20 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: api-tester-4337
+  name: api-tester-4338
   namespace: anotherclass-433
   labels:
-    instance: api-tester-4337
+    instance: api-tester-4338
 spec:
   nodeSelector:
     process: gpu
   tolerations:
-    - key: gpu
-      operator: Exists
+    - key: nvidia
+      value: V100
+      operator: Equal
       effect: NoSchedule
   containers:
-    - name: api-tester-4337
+    - name: api-tester-4338
       image: 1pro/api-tester:3.0.0
       resources:
         requests:
