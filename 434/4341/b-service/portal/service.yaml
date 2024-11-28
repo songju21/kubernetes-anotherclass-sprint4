@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: b-anotherclass-434
+  name: portal-4341
+  labels:
+    part-of: k8s-anotherclass
+    component: frontend-server
+    name: portal
+    instance: portal-4341
+    version: 3.0.0
+    managed-by: kubectl
+spec:
+  selector:
+    part-of: k8s-anotherclass
+    component: frontend-server
+    name: portal
+    instance: portal-4341
+  ports:
+    - port: 80
+      targetPort: http
+  type: ClusterIP

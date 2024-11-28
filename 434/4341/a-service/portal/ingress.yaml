@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: a-anotherclass-434
+  name: portal-4341
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: a-service
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portal-4341
+                port:
+                  number: 80
