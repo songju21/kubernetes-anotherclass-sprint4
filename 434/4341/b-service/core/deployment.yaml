@@ -39,11 +39,11 @@ spec:
               name: http
           resources:
             requests:
-              memory: "200Mi"
               cpu: "50m"
-            limits:
               memory: "200Mi"
+            limits:
               cpu: "100m"
+              memory: "200Mi"
           envFrom:
             - configMapRef:
                 name: api-tester-4341-properties
