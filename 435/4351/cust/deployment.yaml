@@ -47,6 +47,11 @@ spec:
           envFrom:
             - configMapRef:
                 name: cust-4351-properties
+          env:
+            - name: downward_env_pod-name
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           startupProbe:
             httpGet:
               path: "/startup"
