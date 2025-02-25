@@ -18,5 +18,6 @@ spec:
     instance: core-4351
   ports:
     - port: 80
+      nodePort: 30351
       targetPort: http
-  type: ClusterIP
+  type: NodePort
