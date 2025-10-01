@@ -30,7 +30,7 @@ spec:
                 topologyKey: "zone"
       containers:
         - name: api-tester4335
-          image: 1pro/api-tester:3.0.0
+          image: songju021/api-tester:3.0.0
           resources:
             requests:
               memory: "100Mi"
