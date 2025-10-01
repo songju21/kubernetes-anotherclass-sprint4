@@ -19,7 +19,7 @@ spec:
         zone: b-team
       containers:
         - name: api-tester-4331
-          image: 1pro/api-tester:3.0.0
+          image: songju021/api-tester:3.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
